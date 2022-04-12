@@ -1,0 +1,17 @@
+extends layout 
+
+block content
+    div    
+        p(class="p-pagetitle") List
+    div
+        a(href='/party/add', class="button-addplants") Add New List
+    div
+        |
+        div(class="user-cards", data-plant-cards-container)
+        template(data-plant-template)
+            div(class="card")
+                div(class="image", data-image)
+                div(class="header", data-header)
+                div(class="body", data-body)
+                div(class="link", data-link)
+        script(src='/javascript/search_owner_plants.js')

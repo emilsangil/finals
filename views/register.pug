@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    form(action="/register", method="post")
+        p Register
+        div What is your username?
+        div
+            input(type="text", name="userName")
+        div Silently type in your password?
+        div
+            input(type="password", name="pass")
+        div Silently type in your password again?
+        div
+            input(type="password", name="confirm_pass")
+        div
+            button(type='submit') Sign Up
+            | 
+            span or 
+            | 
+            a(href="/") Login  

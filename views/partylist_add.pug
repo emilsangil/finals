@@ -1,0 +1,14 @@
+extends layout 
+block content 
+    form(action="/party/add", method="post")
+        p Create a list
+        div What is the name of the list?
+        div
+            input(type="text", name="listName")
+        div What display picture would you like to use?
+        div
+            input(type="file", name="image")
+        div Who is going to be on the list
+        div 
+            input(type="text", name="memberList")
+        button(type='submit') Create
