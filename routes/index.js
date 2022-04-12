@@ -41,7 +41,7 @@ router
                 })
             }
         }catch(e) {
-            res.render('partylist', {
+            res.render('login', {
                 error: e.message,
             })
         }
