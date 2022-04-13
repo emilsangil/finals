@@ -46,7 +46,11 @@ router
 
 // api to get all party
 router.get('/all', async (req, res) => {
-    const party = await prisma.partylist.findMany({})
+    const party = await prisma.partylist.findMany({
+        where: {
+            partyOwner: req.session.user.username
+        }
+    })
     res.json(party);
 })
 
