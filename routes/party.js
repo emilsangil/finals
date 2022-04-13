@@ -17,39 +17,66 @@ router
         res.render('partylist_add')
     }).post(isAuthenticated,async(req,res) => {
         const {listName, image, memberList } = req.body;
-        try{
-            await prisma.partylist.create({
-                data: {
-                    name: listName,
-                    image: image,
-                    owner: {
-                        connect: {
-                            username: req.session.user.username
-                        }
-                    },
-                    member: {
-                        createMany:[(memberList.split(',')).forEach(value => {
-                            return { 
-                                memberName: value,
-                            }
-                        })] 
-                    },
-                    image: `/image${image}`
-                }
-            })
-            res.render('partylist', {
-                user:req.session.user,
-                msg: 'Successfully created a list'
-            })
-        }catch(e) {
-            res.render('partylist_add', {
-                error: e.message,
-                user: req.session.user
-            })
-        }
+        memberArray = memberList.split(',')
+        await prisma.partylist.create({
+            data: {
+                name: listName,
+                image: image,
+                owner: {
+                    connect: {
+                        username: req.session.user.username
+                    }
+                },
+                Member: memberArray,
+                image: `/images/${image}`
+            }
+        })
+        res.render('partylist', {
+            user:req.session.user,
+            msg: 'Successfully created a list'
+        })
+        // try{
+            
+        // }catch(e) {
+        //     res.render('partylist_add', {
+        //         error: e.message,
+        //         user: req.session.user
+        //     })
+        // }
     })
 
+// api to get all party
+router.get('/all', async(req,res) => {
+        const party = await prisma.partylist.findMany({})
+        res.json(party);
+    })
 
+// get a specific party
+router.get('/:id', isAuthenticated, async(req,res) => {
+        const party = await prisma.partylist.findUnique({
+            where: {
+                id: +req.params.id
+            }
+        })
+        res.render('secretsanta', {
+            party: party,
+            member: party.Member
+        })
+    })
+
+// delete a party
+router.delete('/delete/:id', async(req, res) => {
+        await prisma.partylist.delete({
+            where: {
+                id: +req.params.id
+            }
+        })
+        res.render('partylist', {
+            msg: 'Party successfully deleted'
+        })
+    })
+
+// function to make sure you are logged in
 function isAuthenticated(req,res,next) {
     if (req.session.authenticated) {
         return next();

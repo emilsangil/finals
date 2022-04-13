@@ -7,3 +7,12 @@ body{
     font-size: 60px;
     line-height: 82px;
 }
+
+li{
+    list-style-type: none;
+    display: inline;
+}
+
+  .toggle_hide{
+      display:none
+  }
