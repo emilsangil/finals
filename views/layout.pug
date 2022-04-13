@@ -4,15 +4,32 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="/css/style.css")
-        title Document
-    body
-        header
-            div(class="header1") Secret Santa
-            if error
-                div(class="error") #{error}
-            if msg
-                div(class="success") #{msg}
+        //- link(rel="stylesheet", href="/css/style.css")
+        link(rel="stylesheet", href="/css/stylesheet.css")
+        //- link(rel="stylesheet", href="/css/cards.css")
+        //- Google Fonts
+        link(href="https://fonts.googleapis.com/css2?family=Damion&family=McLaren&family=Roboto&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Damion&family=Klee+One&family=McLaren&family=Roboto&display=swap" rel="stylesheet")
+        title Secret Santa
+    
+    header
+        div(class="main") 
+            p(class="SecretSantaB") Secret Santa
+                //- if error
+                //-     div(class="alert-error") #{error}
+                //- if msg
+                //-     div(class="success") #{msg}
         if user
-            a(href="/logout") Logout 
-        block content
+            div(class="header")
+                p(class="SecretSantaW") Secret Santa
+                a(href="/logout", class="buttonlogout") Logout 
+        //- block content
+        //- else
+        //-     div(class="item2") 
+        //-         p(class="SecretSanta") Secret Santa
+        body
+            if error
+                div(class="alert-error") #{error}
+            if msg
+                div(class="alert-success") #{msg}
+            block content 

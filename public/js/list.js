@@ -13,7 +13,7 @@ fetch('/party/all')
 			const header = card.querySelector('[data-header]');
 			const body = card.querySelector('[data-body]');
 			const link = card.querySelector('[data-link]');
-            image.innerHTML = `<img src="${value.image}", alt="", width= "350px", height= "450px">`
+            image.innerHTML = `<img src="${value.image}", alt="", height="120">`
 			header.textContent = value.name;
 			// body.textContent = value.plantOwner;
 			link.innerHTML = `<a href=/party/${value.id}>View</a>`;

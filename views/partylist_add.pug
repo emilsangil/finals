@@ -1,14 +1,22 @@
 extends layout 
 block content 
-    form(action="/party/add", method="post")
-        p Create a list
-        div What is the name of the list?
-        div
-            input(type="text", name="listName")
-        div What display picture would you like to use?
-        div
-            input(type="file", name="image")
-        div Who is going to be on the list
-        div 
-            input(type="text", name="memberList")
-        button(type='submit') Create
+    div(class="main")
+        div(class="container")
+            div(class="cookie-login")
+                img(class="image" src="/images/BigBoy.png" alt="BigBoy" height="398px")
+            div(class="candycane-login")
+                img(class="image" src="/images/CandyCane.png" alt="CandyCane" height="982px")
+            div(class="fieldset-createlist")
+                form(action="/party/add", method="post")
+                    p(class="fieldsettitle") Create a List
+                    div What is the name of the list?
+                    div
+                        input(type="text", name="listName")
+                    div What display picture would you like to use?
+                    div
+                        input(type="file", name="image")
+                    div Who is going to be on the list
+                    div
+                        input(type="text", name="memberList")
+                    div(class="login-signup")
+                        button(type='submit', class="button-loginL") Create

@@ -1,17 +1,30 @@
 extends layout
 
 block content
-    form(action="/", method="post")
-        p Login
-        div What is your username?
-        div
-            input(type="text", name="userName")
-        div Silently type in your password?
-        div
-            input(type="password", name="pass")
-        div
-            button(type='submit') Login
-            | 
-            span or 
-            | 
-            a(href="/register") Sign Up  
+
+    div(class="main")
+        div(class="container")
+            div(class="cookie-login")
+                img(class="image" src="/images/BigBoy.png" alt="BigBoy" height="398px")
+            div(class="candycane-login")
+                img(class="image" src="/images/CandyCane.png" alt="CandyCane" height="982px")
+            
+            div(class="fieldsetbox")
+                form(action="/", method="post")
+                    p(class="fieldsettitle") Login
+                    div 
+                        p(class="p-label") What is your username?
+                    div
+                        input(type="text", name="userName")
+                    div 
+                        p(class="p-label") Silently type in your password?
+                    div
+                        input(type="password", name="pass")
+                    div(class="login-signup")
+                        button(type='submit', class="button-loginL") Login
+                        | 
+                        p(class="p-label") or
+                        | 
+                        a(href="/register", class="button-signupL") Sign Up  
+            div(class="stamp")
+                img(class="image" src="/images/Stamp.png" alt="Homepage" width="100px" )

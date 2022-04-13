@@ -1,0 +1,96 @@
+  /* CARDS PROJECT */
+.user-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(750px, 4fr));
+	gap: 200px;
+	margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .card {
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+	padding: .5px;
+
+	transition: all 0.4s ease-in;
+/* Card */
+	position: absolute;
+	width: 250px;
+	height: 278px;
+	left: 51px;
+	top: 244px;
+
+	background: #FFFFFF;
+	box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  /* .card:hover {
+	transform: translateY(-1.5rem);
+	border: #E7ECF4 0.2em solid;
+   } */
+
+  .card > .header {
+	margin-bottom: .25rem;
+	padding: 5px 10px;
+	/* overflow: visible; 
+	text-overflow: ellipsis; */
+
+
+	font-family: 'Damion', cursive;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 38px;
+
+	color: #000000;
+	display:inline-block;
+  }
+  
+  .card > .body {
+	font-size: .8rem;
+	color: rgb(24, 22, 31);
+    font-family:'Gudea', sans-serif;
+	letter-spacing: 2px; 
+	font-size: 22px; 
+    line-height: 50px;
+    letter-spacing: 0.10em;
+    font-weight: 400;
+  }
+
+  .card > .link > a{
+	font-size: .8rem;
+	color: rgb(255, 255, 255);
+    font-family:'Gudea', sans-serif;
+	letter-spacing: 2px; 
+	font-size: 18px; 
+    line-height: 30px;
+    letter-spacing: 0.10em;
+    font-weight: 400;
+    border-radius: 36px;
+    background: #749970;
+    padding: 10px;
+/* Primary Button */
+	width: 213px;
+	height: 36px;
+	position: absolute;
+	left: 0%;
+	right: 0%;
+	top: 0%;
+	bottom: 0%;
+	background: #FEFEFE;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 8px;
+	/* Login Text */
+	font-family: 'Klee One';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 29px;
+	text-align: center;
+	color: #D2314E;
+	margin-bottom: 5px;
+  }
+
+  .card > .image {
+      width: 250px;
+  }

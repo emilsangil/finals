@@ -1,0 +1,358 @@
+.alert-error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    display: inline;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    display: inline;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+/* LAYOUT */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+/* 
+.item3 {
+    grid-area: main;
+} */
+
+.grid-container {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'header header header'
+        'main main main';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 125px 550px;
+    gap: 0px;
+    padding: 0px;
+
+}
+
+/* HEADER */
+.header {
+    /* background: rgba(210, 49, 78, 0.75);
+    height: 125px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; */
+    /* 
+    position: absolute; */
+    width: 1512px;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+
+    background: rgba(210, 49, 78, 0.75);
+}
+
+/* MAIN MENU */
+.main {
+    position: relative;
+    width: 1512px;
+    /* height: 982px; */
+    background: #FFFFFF;
+}
+
+.SecretSantaB {
+    position: absolute;
+    width: 322px;
+    height: 82px;
+    left: 51px;
+    top: 30px;
+
+    font-family: 'Damion', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 82px;
+
+    color: #000000;
+}
+.SecretSantaW {
+    position: absolute;
+    width: 322px;
+    height: 82px;
+    left: 51px;
+    top: 30px;
+
+    font-family: 'Damion', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 82px;
+
+    color: #ffffff;
+}
+.buttonlogout {
+    width: 231px;
+    height: 36px;
+    padding: .1em;
+    top: 5px;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    float: right;
+    border-style: none;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 43px;
+    gap: 130px;
+    display: block;
+    background: #1A1C1B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    font-family: 'Klee One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: center;
+    color: #FEFEFE;
+}
+
+/* IMAGES */
+.container {
+    position: relative;
+}
+
+.candycane-login {
+    /* opacity: 50%; */
+    position: absolute;
+    width: 794px;
+    height: 1059px;
+    left: 870px;
+    /* transform: rotate(20deg); */
+}
+
+.cookie-login {
+    /* opacity: 50%; */
+    position: absolute;
+    height: 871px;
+    width: 700px;
+    top: 452px;
+}
+
+.stamp {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 950px;
+    top: 210px;
+}
+
+/* LOGIN and REGISTRATION */
+.fieldsetbox {
+    position: absolute;
+    width: 628px;
+    height: 432px;
+    left: 440px;
+    top: 100px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 10px 35px;
+    background-image: url(../images/fieldsetBG.jpg);
+}
+
+.fieldsettitle {
+    color: #000000;
+    font-style: normal;
+    font-family: 'Damion', cursive;
+    letter-spacing: 2px;
+    font-size: 35px;
+    line-height: 70px;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    text-align: left;
+    text-decoration: none;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+input[type=text],
+select,
+[type=number],
+[type=password],
+[type=email],
+[type=url],
+[type=file] {
+    height: 33px;
+    width: 378px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background: #EBE8E8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.p-label {
+    font-family: 'Klee One', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.button-loginL {
+    width: 231px;
+    height: 36px;
+    padding: .08em;
+    top: 5px;
+    box-sizing: border-box;
+    text-decoration: none;
+    float: right;
+    border-style: none;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    gap: 130px;
+    display: block;
+    background: #FEFEFE;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    font-family: 'Klee One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: center;
+    color: #D2314E;
+}
+
+.button-signupL {
+    width: 231px;
+    height: 36px;
+    padding: .08em;
+    top: 5px;
+    box-sizing: border-box;
+    text-decoration: none;
+    float: right;
+    border-style: none;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    gap: 130px;
+    display: block;
+    background: #1A1C1B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    font-family: 'Klee One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: center;
+    color: #FEFEFE;
+}
+
+.button-loginR {
+    width: 231px;
+    height: 36px;
+    padding: .08em;
+    top: 5px;
+    box-sizing: border-box;
+    text-decoration: none;
+    float: right;
+    border-style: none;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    gap: 130px;
+    display: block;
+    background: #1A1C1B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    font-family: 'Klee One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: center;
+    color: #FEFEFE;
+}
+
+.button-signupR {
+    width: 231px;
+    height: 36px;
+    padding: .08em;
+    top: 5px;
+    box-sizing: border-box;
+    text-decoration: none;
+    float: right;
+    border-style: none;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    gap: 130px;
+    display: block;
+    background: #FEFEFE;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    font-family: 'Klee One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: center;
+    color: #D2314E;
+}
+
+.login-signup {
+    display: inline-flex;
+    gap: 30px;
+}
+
+.fieldset-createlist {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    /* margin-left: 20%; */
+    padding: 60px;
+    float: center;
+    height: 650px;
+    width: 632px;
+    position: absolute;
+    left: 550px;
+    top: 40px;
+    border: 1px solid rgb(131, 130, 130);
+    background-color:white;
+  }
+  .image {
+    float: center;
+  }
